@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Dictation Trainer",
+  "version": "0.4.0",
+  "description": "YouTube dictation trainer with right-side UI and subtitle-track timestamp synchronization.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Dictation Trainer"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
