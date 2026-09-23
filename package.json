@@ -1,0 +1,11 @@
+{
+  "name": "youtube-dictation-trainer",
+  "version": "0.5.0",
+  "private": true,
+  "scripts": {
+    "test": "./run.sh test"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.3"
+  }
+}

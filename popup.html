@@ -43,8 +43,18 @@
     </label>
 
     <label>
-      再生速度
+      1問の長さ
+      <select id="unitLength">
+        <option value="short">短め（1行ずつ）</option>
+        <option value="normal">標準（1文 / 8秒）</option>
+        <option value="long">長め（14秒まで）</option>
+      </select>
+    </label>
+
+    <label>
+      聞き直し速度
       <select id="playbackRate">
+        <option value="0.5">0.5x</option>
         <option value="0.75">0.75x</option>
         <option value="1">1.0x</option>
         <option value="1.2">1.2x</option>
@@ -57,7 +67,17 @@
       <input id="autoResume" type="checkbox" />
     </label>
 
-    <p class="hint">YouTubeで英語字幕をONにして使います。全文モードでは単語数・文字数のガイドだけが表示されます。</p>
+    <p class="hint">英語字幕トラックのある動画で使えます（YouTube側で字幕をONにする必要はありません）。</p>
+
+    <section class="review">
+      <div class="review-head">
+        <h2>復習リスト</h2>
+        <span id="totals" class="totals"></span>
+      </div>
+      <ol id="mistakes" class="mistakes"></ol>
+      <p id="empty" class="empty">間違えた文がここに溜まります。</p>
+      <button id="clear" type="button" class="clear" hidden>履歴を消去</button>
+    </section>
   </main>
   <script src="popup.js"></script>
 </body>
